@@ -17,7 +17,7 @@ export async function loginAction(
   }
 
   try {
-    const res = await fetch(`${AUTH_API_URL}/auth/login`, {
+    const res = await fetch(`${AUTH_API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -59,7 +59,7 @@ export async function registerAction(
   }
 
   try {
-    const res = await fetch(`${AUTH_API_URL}/auth/register`, {
+    const res = await fetch(`${AUTH_API_URL}/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, email, password }),

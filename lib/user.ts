@@ -24,7 +24,7 @@ export async function getUserData(uuid: string) {
   const token = cookieStore.get('access_token')?.value
   if (!token) return { nombre: 'Usuario' }
 
-  const response = await fetch(`${API_URL}/auth/user/${uuid}`, {
+  const response = await fetch(`${API_URL}/user/${uuid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
