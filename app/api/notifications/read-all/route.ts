@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-const NOTIFICATIONS_API_URL = process.env.NOTIFICATIONS_API_URL || "http://localhost:8084";
+const NOTIFICATIONS_API_URL = process.env.NOTIFICATIONS_API_URL || "http://localhost:8000/notifications";
 
 export async function PUT() {
   try {

@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND_GRAPHQL_URL = process.env.GRAPHQL_API_URL || "http://localhost:8083/graphql";
+const BACKEND_GRAPHQL_URL = process.env.GRAPHQL_API_URL || "http://localhost:8000/posts/graphql";
 
 export async function POST(request: NextRequest) {
   try {

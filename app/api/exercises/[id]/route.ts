@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EXERCISES_API_URL = process.env.EXERCISES_API_URL || "http://localhost:8082";
+const EXERCISES_API_URL = process.env.EXERCISES_API_URL || "http://localhost:8000/suggest";
 
 export async function GET(
   request: NextRequest,

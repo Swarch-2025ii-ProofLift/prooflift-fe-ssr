@@ -14,7 +14,7 @@ export const { getClient, query } = registerApolloClient(async () => {
   return new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: process.env.GRAPHQL_API_URL || "http://localhost:8083/graphql",
+      uri: process.env.GRAPHQL_API_URL || "http://localhost:8000/posts/graphql",
       headers: {
         authorization: token ? `Bearer ${token}` : "",
       },

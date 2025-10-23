@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import {jwtDecode} from 'jwt-decode'
 
-const API_URL = process.env.AUTH_API_URL || 'http://localhost:8081'
+const API_URL = process.env.AUTH_API_URL || 'http://localhost:8000/auth'
 
 
 export async function getUserIdFromToken() {

@@ -27,7 +27,7 @@ async function fetchExercises(q?: string, group?: string): Promise<{ exercises: 
     if (group) params.append('group', group)
     params.append('limit', '20')
 
-    const baseUrl = process.env.EXERCISES_API_URL || 'http://localhost:8082'
+    const baseUrl = process.env.EXERCISES_API_URL || 'http://localhost:8000/suggest'
     const url = `${baseUrl}/exercises?${params.toString()}`
 
     const res = await fetch(url, { 

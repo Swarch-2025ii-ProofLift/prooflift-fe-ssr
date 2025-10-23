@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 import { setAuthToken, removeAuthToken } from '@/lib/auth'
 
-const AUTH_API_URL = process.env.AUTH_API_URL || 'http://localhost:8081'
+const AUTH_API_URL = process.env.AUTH_API_URL || 'http://localhost:8000/auth'
 
 export async function loginAction(
   _prevState: { error?: string } | undefined,
