@@ -49,7 +49,7 @@ export function ExercisesGrid({
             params.append('limit', '20')
 
             
-            const baseUrl = process.env.NEXT_PUBLIC_SUGGEST_API_URL || 'http://localhost:8082'
+            const baseUrl = process.env.NEXT_PUBLIC_SUGGEST_API_URL || 'http://localhost:8000/suggest'
             const res = await fetch(`${baseUrl}/exercises?${params.toString()}`)
 
             if (!res.ok) throw new Error('Failed to fetch')

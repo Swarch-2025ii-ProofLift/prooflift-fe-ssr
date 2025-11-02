@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 import { setAuthToken, removeAuthToken } from '@/lib/auth'
 
-const AUTH_API_URL = process.env.AUTH_API_URL || 'http://localhost:8081'
+const AUTH_API_URL = process.env.AUTH_API_URL || 'http://localhost:8000/auth'
 
 export async function loginAction(
   _prevState: { error?: string } | undefined,
@@ -17,7 +17,7 @@ export async function loginAction(
   }
 
   try {
-    const res = await fetch(`${AUTH_API_URL}/auth/login`, {
+    const res = await fetch(`${AUTH_API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -59,7 +59,7 @@ export async function registerAction(
   }
 
   try {
-    const res = await fetch(`${AUTH_API_URL}/auth/register`, {
+    const res = await fetch(`${AUTH_API_URL}/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, email, password }),

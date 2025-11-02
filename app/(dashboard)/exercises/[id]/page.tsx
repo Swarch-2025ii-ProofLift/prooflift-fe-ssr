@@ -59,7 +59,7 @@ function getLevelBadge(level?: string) {
 }
 
 async function fetchExercise(id: string): Promise<Exercise | null> {
-  const baseUrl = process.env.EXERCISES_API_URL || 'http://localhost:8082'
+  const baseUrl = process.env.EXERCISES_API_URL || 'http://localhost:8000/suggest'
   const res = await fetch(`${baseUrl}/exercises/${id}`)
   if (!res.ok) return null
   return res.json()

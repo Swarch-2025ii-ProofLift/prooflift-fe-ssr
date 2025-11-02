@@ -76,7 +76,7 @@ export default function PostHeader({
           dateTime={updatedAt}
           className="text-xs text-muted-foreground opacity-75 self-end sm:self-start"
         >
-          Editado {updatedTimeAgo}
+          Editado: {updatedTimeAgo}
         </time>
       )}
     </div>

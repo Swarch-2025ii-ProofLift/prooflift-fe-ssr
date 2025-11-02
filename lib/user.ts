@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import {jwtDecode} from 'jwt-decode'
 
-const API_URL = process.env.AUTH_API_URL || 'http://localhost:8081'
+const API_URL = process.env.AUTH_API_URL || 'http://localhost:8000/auth'
 
 
 export async function getUserIdFromToken() {
@@ -24,7 +24,7 @@ export async function getUserData(uuid: string) {
   const token = cookieStore.get('access_token')?.value
   if (!token) return { nombre: 'Usuario' }
 
-  const response = await fetch(`${API_URL}/auth/user/${uuid}`, {
+  const response = await fetch(`${API_URL}/user/${uuid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
