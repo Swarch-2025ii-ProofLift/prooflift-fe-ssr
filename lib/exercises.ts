@@ -22,8 +22,6 @@ export interface GetExercisesParams {
   cursor?: string | null
 }
 
-const API_URL = process.env.NEXT_PUBLIC_SUGGEST_API_URL || 'http://localhost:8000/suggest'
-
 export const exercisesAPI = {
   async getExercises({ 
     q = '', 
@@ -36,7 +34,7 @@ export const exercisesAPI = {
     if (q) params.append('q', q)
     params.append('limit', limit.toString())
 
-    const response = await fetch(`${API_URL}/exercises?${params.toString()}`)
+    const response = await fetch(`/api/exercises?${params.toString()}`)
     
     if (!response.ok) {
       throw new Error('Failed to fetch exercises')
