@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     };
 
     const response = await fetch(
-      `${NOTIFICATIONS_API_URL}/api/notifications?limit=${limit}&offset=${offset}`,
+      `${NOTIFICATIONS_API_URL}?limit=${limit}&offset=${offset}`,
       {
         method: "GET",
         headers,

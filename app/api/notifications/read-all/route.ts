@@ -21,7 +21,7 @@ export async function PUT() {
     };
 
     const response = await fetch(
-      `${NOTIFICATIONS_API_URL}/api/notifications/read-all`,
+      `${NOTIFICATIONS_API_URL}/read-all`,
       {
         method: "PUT",
         headers,
