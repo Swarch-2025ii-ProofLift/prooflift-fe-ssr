@@ -44,6 +44,7 @@ export function ExerciseCard({ id, title, bodyPart }: ExerciseCardProps) {
           width={400}
           height={300}
           priority={false}
+          unoptimized={true}
         />
         
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
